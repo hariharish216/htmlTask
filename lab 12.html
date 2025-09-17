@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // set->cannot accept dupilcate,uniquely identifiers values,
+        // create a set
+        let email=new Set([]);
+        email.add("hari@gamil.com");
+        email.add("san@email.com");
+        email.add("sh@email.com"); 
+        email.delete("sh@email.com")
+        console.log(email)
+        for(mail of email){
+            console.log(mail);
+        }
+
+        email.forEach(x=>{
+            console.log(x)
+        })
+        let adminperm=new Set(["write","read","delete"])
+        let userperm=new Set(["read"])
+        function hasperm(role,perm){
+            return role.has(perm);
+
+        }
+        console.log(hasperm(adminperm,"delete"));
+        console.log(hasperm(userperm,"delete"));
+        //map
+        let user1={name:"sajitha"};
+        let user2={name:"saravanan"};
+        let map=new Map();
+        map.set(user1,"hi Mr.harish");
+        map.set(user2,"hi Mr.sannn");
+
+        console.log(map)
+
+    </script>
+</body>
+</html>
